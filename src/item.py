@@ -28,10 +28,7 @@ class Item:
 
         :return: Общая стоимость товара.
           """
-        total_price = 0
-        price = self.price * self.quantity
-        total_price += price
-        return total_price
+        return self.price * self.quantity
 
 
 
