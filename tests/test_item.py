@@ -32,23 +32,27 @@ def test_apply_discount():
 
 
 def test_string_to_number():
+    """tests for func 'string_to_number'"""
     assert Item.string_to_number('5') == 5
     assert Item.string_to_number('5.0') == 5
     assert Item.string_to_number('5.5') == 5
 
 
 def test_instantiate_from_csv():
-    a = Item.name = 'Смартфон'
-    b = Item.name = 'Ноутбук'
-    c = Item.name = 'Кабель'
-    d = Item.name = 'Мышка'
-    e = Item.name = 'Клавиатура'
+    """test for list"""
+    Item.instantiate_from_csv()
+    assert len(Item.all) == 5
+    item1 = Item.name = 'Смартфон'
+    item2 = Item.name = 'Ноутбук'
+    item3 = Item.name = 'Кабель'
+    item4 = Item.name = 'Мышка'
+    item5 = Item.name = 'Клавиатура'
 
-    assert a == 'Смартфон'
-    assert b == 'Ноутбук'
-    assert c == 'Кабель'
-    assert d == 'Мышка'
-    assert e == 'Клавиатура'
+    assert item1 == 'Смартфон'
+    assert item2 == 'Ноутбук'
+    assert item3 == 'Кабель'
+    assert item4 == 'Мышка'
+    assert item5 == 'Клавиатура'
 
 
 

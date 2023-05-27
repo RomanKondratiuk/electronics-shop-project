@@ -61,7 +61,8 @@ class Item:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 Item(row['name'], row['price'], row['quantity'])
-            print(f"в файле {len(cls.all)} записей с данными по товарам")
+            #return f"в файле {len(cls.all)} записей с данными по товарам"
+
 
 
     @staticmethod
