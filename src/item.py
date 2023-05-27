@@ -1,8 +1,10 @@
 
 
 import csv
+import os
+os.path.join('Users', 'romankondratiuk', 'Desktop', 'electronics-shop-project', 'src', 'items.csv')
+PATH = '/Users/romankondratiuk/Desktop/electronics-shop-project/src/items.csv'
 
-from poetry.console.commands import self
 
 
 class Item:
@@ -57,7 +59,7 @@ class Item:
          класс-метод, инициализирующий экземпляры класса Item данными из файла src/items.csv
         #  """
         cls.all.clear()
-        with open("/Users/romankondratiuk/Desktop/electronics-shop-project/src/items.csv", newline="") as csvfile:
+        with open(PATH, newline='') as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 Item(row['name'], row['price'], row['quantity'])
