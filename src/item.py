@@ -60,13 +60,8 @@ class Item:
         with open("/Users/romankondratiuk/Desktop/electronics-shop-project/src/items.csv", newline="") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                cls.all.append(row)
-            return f' в файле {cls.all} записей с данными по товарам'
-
-
-                # cls.all.append(row)
-
-           # print(f"в файле {len(cls.all)} записей с данными по товарам")
+                Item(row['name'], row['price'], row['quantity'])
+            print(f"в файле {len(cls.all)} записей с данными по товарам")
 
 
     @staticmethod
