@@ -2,8 +2,7 @@
 
 import csv
 import os
-os.path.join('Users', 'romankondratiuk', 'Desktop', 'electronics-shop-project', 'src', 'items.csv')
-PATH = '/Users/romankondratiuk/Desktop/electronics-shop-project/src/items.csv'
+PATH = (os.path.join(os.path.dirname(os.path.abspath(__file__)), 'items.csv'))
 
 
 
