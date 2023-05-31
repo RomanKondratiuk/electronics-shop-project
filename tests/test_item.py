@@ -55,4 +55,18 @@ def test_instantiate_from_csv():
     assert item5 == 'Клавиатура'
 
 
+def test__repr__():
+    """test for __repr__"""
+
+    item1 = Item('Смартфон', 10000, 20)
+    assert repr(item1) == "Item('Смартфон', 10000, 20)"
+
+
+def test__str__():
+    """test for __str__"""
+
+    item1 = Item('Смартфон', 10000, 20)
+    assert str(item1) == 'Смартфон'
+
+
 

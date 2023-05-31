@@ -5,7 +5,6 @@ import os
 PATH = (os.path.join(os.path.dirname(os.path.abspath(__file__)), 'items.csv'))
 
 
-
 class Item:
     """
     Класс для представления товара в магазине.
@@ -26,6 +25,12 @@ class Item:
         self.price = price
         self.quantity = quantity
 
+    def __repr__(self):
+        return f"{self.__class__.__name__}('{self.__name}', {self.price}, {self.quantity})"
+
+    def __str__(self):
+        return self.__name
+
     @property
     def name(self):
         return self.__name
@@ -35,8 +40,7 @@ class Item:
         if len(name) <= 10:
             self.__name = name
         else:
-             print("Длина наименования товара превышает 10 символов.")
-
+            print("Длина наименования товара превышает 10 символов.")
 
     def calculate_total_price(self):
         """
