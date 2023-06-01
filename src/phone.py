@@ -36,14 +36,3 @@ class Phone(Item):
 
 
 
-
-# item_1 = Item("iPhone 13", 100_000, 7)
-# phone_1 = Phone("iPhone 14", 120_000, 5, 2)
-# phone_2 = Phone("iPhone 12", 80_000, 3, 2)
-#
-# total_quantity = item_1 + phone_1
-# #total_quantity = phone_1 + phone_2
-# #total_quantity = phone_1 + 8
-#
-#
-#print(total_quantity)
