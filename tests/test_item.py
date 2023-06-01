@@ -62,11 +62,11 @@ def item3():
 
 def test__repr__(item3):
     """test for __repr__"""
-    assert repr(item1) == "Item('Смартфон', 10000, 20)"
+    assert repr(item3) == "Item('Смартфон', 10000, 20)"
 
 
 def test__str__(item3):
     """test for __str__"""
-    assert str(item1) == 'Смартфон'
+    assert str(item3) == 'Смартфон'
 
 
