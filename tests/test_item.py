@@ -55,18 +55,18 @@ def test_instantiate_from_csv():
     assert item5 == 'Клавиатура'
 
 
-def test__repr__():
-    """test for __repr__"""
+@pytest.fixture
+def item3():
+    return Item('Смартфон', 10000, 20)
 
-    item1 = Item('Смартфон', 10000, 20)
+
+def test__repr__(item3):
+    """test for __repr__"""
     assert repr(item1) == "Item('Смартфон', 10000, 20)"
 
 
-def test__str__():
+def test__str__(item3):
     """test for __str__"""
-
-    item1 = Item('Смартфон', 10000, 20)
     assert str(item1) == 'Смартфон'
-
 
 

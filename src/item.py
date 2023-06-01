@@ -29,7 +29,12 @@ class Item:
         return f"{self.__class__.__name__}('{self.__name}', {self.price}, {self.quantity})"
 
     def __str__(self):
-        return self.__name
+        return f"{self.__name}"
+
+    def __add__(self, other):
+        if isinstance(other, self.__class__):
+            return self.quantity + other.quantity
+            return other.quantity + self.quantity
 
     @property
     def name(self):
